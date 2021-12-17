@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&family=Roboto:wght@300;400;500;700;900&display=swap');
+@font-face {
+    font-family: NikkyouSans;
+    src: url('../assets/NikkyouSans-mLKax.ttf');
+}
+
+:root{
+    --clr-main:#2D2D2D;
+    --clr-sub-highlight: #10d1e7;
+    --clr-sub: #0ec5da;
+    --bg-utility:rgb(10, 67, 128);
+    --border:#707070;
+
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+    color:white;
+    font-size: 100%;
+    transition: 0.2s ease-in-out;
+}
+.main-cover{
+    background:var(--clr-main);
+}
+a{
+    text-decoration: none;
+}
+
+
+/* * typography */
+.typo-sub-header{
+    color:var(--clr-main);
+    background:  var(--clr-sub);
+    font-size:clamp(0.6rem,4vw,0.9rem);
+    display: inline-block;
+    padding:.6em;
+    cursor: pointer;
+    margin-top: 0.5em;
+}
+.typo-sub-header:nth-of-type(even){
+    margin-right: 0.4em;
+}
+.typo-main-header{
+    font-family: NikkyouSans;
+    font-size: clamp(2rem,4vw,5rem);
+}
+.typo-sub-header:hover{
+    color:white;
+    box-shadow: var(--bg-utility) 0px 6px 12px -2px,var(--clr-sub) 0px 3px 7px -3px;
+}
+.typo-main-para{
+    font-size: clamp(0.7rem,4vw, 1.1rem);
+    text-align: center;
+    line-height: 2;
+    max-width:68ch;
+    word-break: break-word;
+    margin: 0 auto;
+
+}
+.typo-header-util-1{
+    font-size: 0.8rem;
+    
+}
+.typo-header-util{
+    font-family: NikkyouSans;
+    font-size: clamp(0.8rem,8vw,1.4rem);
+    color:var(--clr-sub);
+}
+.card-title-main{
+    font-size: clamp(0.8rem,8vw,2rem);
+    font-weight: 700;
+    max-width: 24ch;
+}
+
+
+/* *assets */
+.icon-front{
+    margin-right: 0.5em;
+    color: var(--clr-main);
+}
+
+
+/* *containers */
+.section-wrapper{
+    padding-block:8em;
+}
+.about-desc{
+    padding-block:6em;
+    text-align: center;
+}
+.about-desc a{
+    margin-top: 2em;
+    display: inline-block;
+}
+.sub-division{
+    margin-top: 2em;
+}
+.section-contain-front{
+    display:flex;
+    justify-content:space-between !important;
+    align-items:center !important;
+}
+.section-contain-front:nth-of-type(2){
+    margin-top: 4em;
+}
+
+.higlight{
+    color:var(--clr-sub);
+    font-weight: 600;
+}
+
+
+.projects-contain{
+    gap:4em;
+    margin-top: 2em;
+    justify-content: center;
+    align-items: center;
+}
+.card-projects{
+    background:none;
+    width:18em;
+    border:0.2px solid rgb(88, 88, 88);
+
+}
+.card-projects:hover{
+    box-shadow: rgb(10, 67, 128) 0px 6px 12px -2px,var(--clr-sub) 0px 3px 7px -3px;
+    transform: scale(1.02);
+}
+.card-contact{
+    background:var(--clr-sub);
+    border-radius: 8px;
+    padding:2em;
+    margin-block: 4em;
+}
+.projects{
+    padding-block:6em;
+}
+.footer-wrapper{
+    padding-block:4em;
+    font-size:0.8rem;
+}
+.skill-set{
+    padding-block:6em;
+}
+.skill-grid{
+    display: flex;
+    gap:1em;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
+.skill-cover{
+    background:none;
+    border:0.2px solid rgb(163, 163, 163);
+    padding:1em;
+    width:10em;
+    height:10em;
+    cursor: pointer;
+}
+
+.skill-cover .card-body{
+    display: flex;
+    justify-content: space-between;
+    text-align:center;
+    font-weight: 700;
+    flex-direction: column;
+}
+.skill-icon{
+    font-size: 3rem;
+}
+.card-text{
+    color:rgb(168, 168, 168) !important;
+}
+
+/* *links */
+.navigation-cta{
+    padding:.8em;
+    font-weight:600;
+    text-decoration: none;
+    color:var(--clr-main);
+    background:  var(--clr-sub);
+    margin-top: 2em;
+    border-radius: 5px;
+}
+.navigation-cta:hover{
+    background:var(--clr-sub);
+    color:white;
+}
+.navigation-email{
+    background:var(--clr-main);
+    padding:1em;
+    color:white;
+    border-radius: 8px;
+    font-weight: 600;
+}
+.navigation-email:hover{
+    color:var(--clr-sub-highlight);
+    background:var(--bg-utility);
+}
+.navigation-link{
+    border:1px solid var(--border);
+    display:inline-block;
+    padding: .6em;
+    border-radius: 5px;
+    color:white;
+    font-weight: 600;
+    min-width: 7em;
+    font-size: clamp(0.6rem,8vw,1rem);
+    text-align: center;
+}
+.navigation-link:hover{
+    background:var(--clr-sub);
+    color:white;
+}
+.navigation-link:nth-of-type(even){
+    margin-inline: 0.4em;
+}
+.social-link{
+    font-size: 2.4rem;
+    color:var(--clr-sub)
+}
+.socials:nth-of-type(even) {
+    margin-inline: 0.4em;
+}
+.social-link:hover{
+    
+}
+.highlight{
+    font-weight: 700;
+    color:var(--clr-sub)
+}
+.copyright-note{
+    text-align: right;
+    font-size:0.9rem;
+    color:rgb(165, 165, 165);
+}
+.profile{
+    width:26em;
+}
+
+/* * media query */
+@media (max-width: 576px) { 
+    .section-wrapper{
+        padding-block: 4em;
+        margin: 0;
+    }
+    .navigation-bar{
+        display:flex;
+        gap: 1em;
+    }
+    .section-contain-front{
+        flex-direction: column-reverse;
+       
+    }
+    .profile{
+        width: 10em;
+    }
+    .division-details{
+        text-align:center;
+        margin-top: 2em;
+    }
+    .typo-main-header{
+        max-width: 100ch;
+    }
+    .card-contact .card-body{
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+        
+    }
+    .card-title-main{
+        margin-bottom: 1em;
+    }.navigation-link:nth-of-type(even){
+        width: 100%;
+       margin-inline: 0;
+    }
+    .wrapper > *{
+        padding-block: 4em;
+        
+    }
+    .card-contact{
+        padding:2em;
+    }
+ }
+
+@media (max-width: 768px) and (min-width: 576px) {
+    .navigation-bar{
+        display:flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+    .section-contain-front{
+        gap:4em;
+    }
+    .section-wrapper{
+        padding-block: 4em;
+    }
+    .navigation-link:nth-of-type(even){
+        width: 100%;
+       margin-inline: 0;
+    }
+    .card-contact{
+        padding:2em;
+    }
+    .card-contact .card-body{
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .card-title-main{
+        margin-bottom: 1em;
+    }
+ }
+
+@media (min-width: 992px) { 
+    
+ }
